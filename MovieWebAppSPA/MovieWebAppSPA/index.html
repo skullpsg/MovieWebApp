@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Movie Web Applicaiton</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css" type="text/css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.common-material.min.css" type="text/css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.412/styles/kendo.material.min.css" type="text/css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.css' type='text/css' media='all' />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet/less" type="text/css" href="content/styles.less" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <base href="/MovieWebAppSPA/" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body data-ng-app="movieApp">
+    <div ng-controller="indexController">
+        <div class="top-header">
+            <div layout="row" class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
+                <div class="container">
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Movie">Movie</a></li>                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div layout="row" flex id="wrapper">
+            <div layout="column" flex id="page">
+                <div data-ng-view=""></div>
+                <div class="footer" id="footer" layout="row">
+                    <div class="container">
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-6">
+                                <p class="text-muted">Created by Vishnu sankar. Twitter: <a target="_blank" href="https://twitter.com/vishnusankarpsg">@vishnusankarpsg</a></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-muted">Vishnu sankar Blog: <a target="_blank" href="http://Redefinecodes.com">redefinecodes.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("dragover", function (e) {
+            e = e || event;
+            e.preventDefault();
+        }, false);
+        window.addEventListener("drop", function (e) {
+            e = e || event;
+            e.preventDefault();
+        }, false);
+    </script>
+    <!-- 3rd party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.7.1/loading-bar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.5/angular-sanitize.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2016.1.412/js/kendo.all.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="app/app.js"></script>
+    <!--FrontEnd Model Creation-->
+    <script src="common/entities.js"></script>
+    <!--BladeJs-->
+    <script src="scripts/BladeContext.js"></script>
+    <script src="app/services/bladeService.js"></script>
+    <!--Services-->
+    <script src="app/services/movieService.js"></script>
+    <!--controllers List-->
+    <script src="app/controller/indexcontroller.js"></script>
+    <script src="app/controller/movieListControler.js"></script>
+    <script src="app/controller/addMovieTemplateController.js"></script>
+    <script src="app/controller/editMovieTemplateController.js"></script>
+</body>
+</html>

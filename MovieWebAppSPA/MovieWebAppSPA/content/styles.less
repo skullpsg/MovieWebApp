@@ -1,0 +1,142 @@
+﻿@import "customless/variables";
+
+body {
+    background: @bg-white-color;
+    font-family: @body-font-family;
+    font-size: @body-font-size;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    color: @body-font-color;
+}
+
+#loading-bar {
+    background: #676f77;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    .bar {
+        background: #ec495f;
+        height: 3px;
+    }
+}
+
+#loading-bar-spinner {
+    display: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Scroll Bar Custom CSS*/
+.mCSB_container_wrapper {
+    margin-right: 0px;
+
+    .mCSB_container {
+        padding-right: 5px;
+    }
+}
+
+.mCSB_scrollTools {
+    width: 14px;
+
+    .mCSB_draggerRail {
+        background-color: #000;
+        background-color: rgb(241, 241, 241);
+        width: 10px;
+        border-radius: 0px;
+    }
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: rgb(111, 111, 111);
+    width: 10px;
+    border-radius: 0px;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: rgb(111, 111, 111);
+}
+
+.mCSB_scrollTools .mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: rgb(111, 111, 111);
+}
+
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background-color: rgb(111, 111, 111);
+    filter: "alpha(opacity=90)";
+    -ms-filter: "alpha(opacity=90)";
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+    margin: 10px 0px;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+    margin: 0 10px;
+}
+
+.main-nav {
+    .mCSB_scrollTools {
+        width: 5px;
+    }
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?2vx9ek');
+    src: url('fonts/icomoon.eot?2vx9ek#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?2vx9ek') format('truetype'), url('fonts/icomoon.woff?2vx9ek') format('woff'), url('fonts/icomoon.svg?2vx9ek#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-queue, .icon-relay, .icon-sb-icon, .icon-topic, .icon-eventhub {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-queue:before {
+    content: "\e900";
+}
+
+.icon-relay:before {
+    content: "\e901";
+}
+
+.icon-sb-icon:before {
+    content: "\e902";
+}
+
+.icon-topic:before {
+    content: "\e903";
+}
+
+.icon-eventhub:before {
+    content: "\e904";
+}
+
+button, select, html, textarea, input {
+    font-family: @body-font-family;
+}
+
+@import "customless/layout";
+@import "customless/material";
+@import "customless/page";
+@import "customless/kendo";
+@import "customless/BladeContext";

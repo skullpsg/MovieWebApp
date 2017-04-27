@@ -1,0 +1,342 @@
+﻿@import "variables";
+
+.grid-buttons {
+    clear: both;
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+
+    .md-button {
+        margin-right: 6px;
+    }
+}
+
+*[role="button"] {
+    cursor: pointer;
+    outline: none;
+}
+
+
+.k-grid {
+    color: @krid-font-color;
+    border-color: @krid-border-color;
+    font-size: 13px;
+    padding: 0px;
+    margin: 0px;
+
+    td {
+        border-color: @krid-td-border-color;
+        padding: 8px 10px;
+        white-space: nowrap;
+        position: relative;
+
+        md-input-container {
+            padding: 0px;
+
+            label {
+                top: -21px;
+            }
+
+            .md-input {
+                padding: 0px;
+                line-height: normal;
+                top: -10px;
+                position: relative;
+                border-color: transparent;
+                color: inherit;
+            }
+
+            .edit {
+                border-color: #00b2ca;
+            }
+
+            &.md-input-has-value label:not(.md-no-float) {
+                opacity: 0;
+                top: -11px;
+            }
+
+            &.md-input-focused label:not(.md-no-float) {
+                top: -11px;
+            }
+
+            .md-errors-spacer {
+                min-height: 1px;
+            }
+        }
+
+        .md-button.md-fab.md-mini {
+            line-height: 30px;
+            width: 20px;
+            height: 30px;
+            min-height: 30px;
+            font-size: 14px;
+            margin: 0px 10px 0px 0px;
+        }
+
+        md-switch {
+            margin: 0px;
+
+            .md-container {
+                float: none;
+                margin: 0 auto;
+            }
+        }
+        /*&[role="button"] {
+            color: @primary-bg-color;
+            font-weight: 600;
+        }*/
+    }
+
+    .k-grid-header {
+        border-color: @krid-border-color;
+
+        .k-header {
+            color: #585858;
+            background: @krid-th-bg-color;
+            border-color: @krid-border-color;
+            font-weight: 500;
+
+            .k-link {
+                color: #585858;
+            }
+        }
+
+        th.k-header {
+            padding: 8px 10px;
+            font-weight: 600;
+            border-color: @krid-border-color;
+        }
+    }
+
+    tr:hover td {
+        background: #fafafa;
+    }
+
+    tr[role="button"] {
+        cursor: pointer;
+    }
+
+    tr.k-state-selected {
+        color: inherit;
+        background: #fafafa;
+
+        &:hover td {
+            background: #fafafa;
+        }
+
+        td {
+            border-color: #fafafa;
+        }
+    }
+
+    .left {
+        display: inline-block;
+        padding-right: 10px;
+    }
+
+    .right {
+        display: inline-block;
+    }
+
+    .low-txt {
+        color: #cccbcb;
+        line-height: 18px;
+    }
+
+    .error {
+        color: @error-color;
+        display: table;
+        vertical-align: middle;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .warning {
+        color: @warning-color;
+        display: table;
+        vertical-align: middle;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .success {
+        color: @success-color;
+        display: table;
+        vertical-align: middle;
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    md-checkbox {
+        margin: 0px;
+        min-width: 15px;
+        min-height: 15px;
+
+        .md-container {
+            width: 15px;
+            height: 15px;
+        }
+
+        &:not(.md-checked) .md-icon {
+            border-color: rgba(0,0,0,0.4);
+        }
+
+        .md-icon {
+            width: 15px;
+            height: 15px;
+
+            &:after {
+                left: 4px;
+                top: 0px;
+                width: 4px;
+                height: 9px;
+            }
+        }
+    }
+
+    md-checkbox[disabled] .md-icon {
+        border-color: rgba(0,0,0,0.26);
+    }
+}
+
+.no-header-wrap {
+    .k-grid-header {
+        height: 2px !important;
+        overflow: hidden;
+
+        .k-header {
+            background: @krid-border-color;
+        }
+    }
+}
+
+.recover {
+    color: #09B7CE;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+}
+
+.grid-x-small .k-grid-content {
+    height: 200px;
+}
+
+.grid-small .k-grid-content {
+    height: 255px;
+}
+
+.grid-m-small .k-grid-content {
+    height: 240px;
+}
+
+.grid-m-large .k-grid-content {
+    height: 320px;
+}
+
+.grid-md-small .k-grid-content {
+    height: 350px;
+}
+
+.grid-medium .k-grid-content {
+    height: 400px;
+}
+
+.grid-large {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    height: 100%;
+
+    #grid {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .k-grid-content {
+        height: 100%;
+        overflow: auto !important;
+    }
+
+    .k-grid-header {
+        padding-right: 0px !important;
+    }
+}
+
+
+/*Kendo Date time picker*/
+
+.k-picker-wrap.k-state-hover {
+    box-shadow: none;
+}
+
+k-numeric-wrap:before, .k-picker-wrap:before {
+    height: 25px;
+}
+
+.k-picker-wrap {
+    .k-input {
+        height: 25px;
+    }
+
+    .k-select {
+        line-height: 2.1em;
+    }
+}
+
+/*Kendo Check Box */
+.k-checkbox:checked + .k-checkbox-label:before {
+    background-color: @success-color;
+    border-color: @success-color;
+}
+
+.k-checkbox-label {
+    font-weight: 600;
+}
+
+.k-calendar {
+    .k-header {
+        background: @theme-bg;
+
+        .k-state-hover {
+            background: darken(@theme-bg,5%);
+        }
+    }
+
+    .k-today {
+        background: #99A5A7;
+
+        &.k-state-hover {
+            background: darken(@theme-bg,5%);
+        }
+    }
+
+    td.k-state-focused, td.k-state-selected.k-state-focused {
+        box-shadow: none;
+    }
+
+    td.k-state-selected {
+        background: @theme-bg;
+    }
+}
+
+.selected-namespace {
+    background: #ededed;
+
+    .low-txt {
+        color: #9b9b9b;
+    }
+
+    &:hover td {
+        background: #ededed !important;
+    }
+}
+
+.nonselected-namespace {
+}
+
+
+/* resource properties grid scroll fix*/
+.pq-list.grid-large .k-grid-content {
+    height: 100%;
+    overflow: hidden !important;
+}

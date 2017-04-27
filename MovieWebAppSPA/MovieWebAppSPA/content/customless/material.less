@@ -1,0 +1,444 @@
+﻿@import "variables";
+
+.container-fluid {
+    padding: 15px;
+
+    &:before, &:after {
+        box-sizing: border-box;
+        display: table;
+        content: " ";
+        clear: both;
+    }
+}
+
+md-sidenav {
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+
+    &.md-locked-open {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+    }
+}
+
+md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 60px !important;
+    width: 60px !important;
+    max-width: 60px !important;
+}
+
+md-toolbar.md-menu-toolbar {
+    background: @theme-bg;
+    min-height: 40px;
+}
+
+.subscription_txt {
+    padding: 20px 0px 0px 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.content-wrapper {
+    /* position: absolute;*/
+    @media @tablet {
+        left: 0px;
+    }
+}
+
+
+.license-promotion {
+    .alert {
+        position: absolute;
+        left: 50%;
+        top: 4px;
+        width: 865px;
+        margin-left: -450px;
+    }
+
+    .Loader-popup {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: rgba(0, 0, 0, .3);
+        z-index: 9999;
+
+
+        .Loader-box {
+            background: rgb(99, 111, 134);
+            width: 500px;
+            top: 25%;
+            margin-left: 35%;
+            margin-top: 15%;
+
+            .title-txt {
+                margin-top: 40px;
+                color: #1C1B1F;
+            }
+        }
+    }
+}
+
+.md-button.md-raised:not([disabled]) {
+    box-shadow: none;
+}
+
+.md-button.md-raised {
+    background: @normal-bg-color;
+    border: @normal-bg-color solid 1px;
+    color: #FFF;
+    padding: 0px 12px;
+    height: 30px;
+    min-height: 30px;
+    line-height: 28px;
+    border-radius: 0px;
+    margin: 0px;
+    font-size: 13px;
+
+    &:not([disabled]):hover {
+        background: darken(@normal-bg-color,5%);
+    }
+}
+
+.md-button.md-primary.md-raised {
+    background-color: @primary-bg-color;
+    border: @primary-bg-color solid 1px;
+    color: #FFF;
+    box-shadow: none;
+
+    &:focus {
+        background-color: @primary-bg-color;
+    }
+
+    &:not([disabled]):hover {
+        background: darken(@primary-bg-color,5%);
+        border: darken(@primary-bg-color,5%) solid 1px;
+    }
+}
+
+.md-button.md-secondary.md-raised {
+    background: @secondary-bg-color;
+    color: #FFF;
+    box-shadow: none;
+    border: @secondary-bg-color solid 1px;
+
+    &:not([disabled]):hover {
+        background: darken(@secondary-bg-color,5%);
+        border: darken(@secondary-bg-color,5%) solid 1px;
+    }
+}
+
+.md-button.md-warn.md-raised {
+    background: @error-color;
+    color: #FFF;
+    box-shadow: none;
+    border: @error-color solid 1px;
+
+    &:not([disabled]):hover {
+        background: darken(@error-color,5%);
+        border: darken(@error-color,5%) solid 1px;
+    }
+}
+
+.md-primary.md-raised[disabled], .md-secondary.md-raised[disabled], .md-button.md-raised[disabled] {
+    background-color: @disabled-bg-color;
+    border: #e7e7e7 solid 1px;
+    color: #a0a0a0 !important;
+    box-shadow: none;
+
+    &:hover {
+        background: @disabled-bg-color;
+    }
+}
+
+
+
+
+a.md-button.md-default-theme.md-primary.md-raised.md-focused:not([disabled]), a.md-button.md-primary.md-raised.md-focused:not([disabled]), a.md-button.md-default-theme.md-primary.md-fab.md-focused:not([disabled]), a.md-button.md-primary.md-fab.md-focused:not([disabled]), .md-button.md-default-theme.md-primary.md-raised.md-focused:not([disabled]), .md-button.md-primary.md-raised.md-focused:not([disabled]), .md-button.md-default-theme.md-primary.md-fab.md-focused:not([disabled]), .md-button.md-primary.md-fab.md-focused:not([disabled]) {
+    background-color: @primary-bg-color;
+}
+
+.md-button.md-raised.md-focused:not([disabled]), .md-button.md-fab.md-focused:not([disabled]) {
+    background-color: @primary-bg-color;
+    color: #FFF;
+    box-shadow: none;
+}
+
+md-input-container label, md-input-container .md-placeholder {
+    color: rgba(0,0,0,.65);
+}
+
+md-select .md-select-value.md-select-placeholder {
+    color: rgba(0,0,0,.65);
+}
+
+md-input-container .md-input[disabled] {
+    color: rgba(0,0,0,.5);
+}
+
+
+md-input-container:not(.md-input-invalid).md-input-has-value label, md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: @theme-bg;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: @secondary-bg-color;
+}
+
+md-input-container.md-input-invalid.md-input-focused label {
+    color: @error-color;
+}
+
+md-input-container.md-input-invalid .md-input {
+    border-color: @error-color;
+}
+
+md-select-menu:not(.md-overflow) md-content {
+    padding: 0px;
+}
+
+md-select-menu md-option[selected] {
+    color: @secondary-bg-color !important;
+}
+
+md-select-menu.md-default-theme md-option[selected], md-select-menu md-option[selected] {
+    color: @secondary-bg-color !important;
+}
+
+md-select-menu.md-default-theme:not([disabled]):focus md-select-value, md-select:not([disabled]):focus md-select-value {
+    border: none;
+    border-bottom-color: @primary-bg-color;
+    color: @primary-bg-color;
+}
+
+md-select:not([disabled]):focus .md-select-value {
+    border: none;
+}
+
+md-select-menu {
+    min-height: 35px;
+
+    md-content {
+        min-height: 35px;
+    }
+}
+
+md-option {
+    height: 35px;
+
+    .md-text {
+        font-size: 14px;
+    }
+}
+
+md-switch.md-default-theme .md-bar, md-switch .md-bar {
+    background-color: #E8E8E8;
+}
+
+md-switch.md-default-theme.md-checked.md-primary .md-thumb, md-switch.md-checked.md-primary .md-thumb {
+    background-color: @success-color;
+}
+
+md-switch.md-default-theme.md-checked.md-primary .md-ink-ripple, md-switch.md-checked.md-primary .md-ink-ripple {
+    color: @success-color;
+}
+
+md-switch.md-default-theme.md-checked.md-primary .md-bar, md-switch.md-checked.md-primary .md-bar {
+    background-color: lighten(@success-color, 20%);
+}
+
+
+md-slider.md-default-theme .md-track.md-track-fill, md-slider .md-track.md-track-fill {
+    background-color: @success-color;
+}
+
+md-slider.md-default-theme .md-thumb:after, md-slider .md-thumb:after {
+    border-color: @success-color;
+    background-color: @success-color;
+}
+
+md-slider.md-default-theme .md-focus-ring, md-slider .md-focus-ring {
+    background-color: @success-color;
+}
+
+md-slider.md-default-theme .md-sign, md-slider .md-sign {
+    background-color: @success-color;
+}
+
+md-slider.md-default-theme .md-sign:after, md-slider .md-sign:after {
+    border-top-color: @success-color;
+}
+
+.md-label {
+    font-weight: 600;
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon, md-checkbox.md-checked .md-icon {
+    background-color: @success-color;
+}
+
+.md-button.md-icon-button {
+    width: 25px;
+    height: 25px;
+    min-height: 25px;
+    line-height: 25px;
+    padding: 4px;
+    margin: 0px;
+
+    md-icon {
+        color: @md-fab-color;
+    }
+
+    md-icon.sep-iocn {
+        color: @krid-font-color;
+        font-size: 15px;
+    }
+}
+
+
+.md-button.md-fab {
+    box-shadow: none;
+}
+
+.md-button.md-primary.md-fab {
+    background: transparent;
+    color: @md-fab-color;
+
+    &:not([disabled]):hover {
+        background: @success-color;
+        color: @bg-white-color;
+    }
+}
+
+.md-button.md-warn.md-fab {
+    background: transparent;
+    color: @md-fab-color;
+
+    &:not([disabled]):hover {
+        background: @error-color;
+        color: @bg-white-color;
+    }
+}
+
+.md-button.md-secondary.md-fab {
+    background: transparent;
+    color: @md-fab-color;
+
+    &:not([disabled]):hover {
+        background: @secondary-bg-color;
+        color: @bg-white-color;
+    }
+}
+
+.md-edit {
+    width: auto;
+    min-width: initial;
+    min-height: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 0px;
+}
+
+md-dialog {
+    .md-dialog-content {
+        padding: 20px;
+    }
+
+    md-dialog-actions {
+        min-height: 100%;
+        padding: 0px 20px 20px 20px;
+    }
+
+    h2 {
+        padding: 0px;
+        margin: 0px;
+        font-weight: 400;
+        color: #1D1D1D;
+    }
+}
+
+md-toast {
+    padding: 50px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+
+    .md-toast-content {
+        background: #FFF;
+        position: relative;
+        padding-left: 40px;
+        font-size: 13px;
+        color: #2f2f2f;
+        width:100%;
+    }
+
+    &.md-success-toast-theme .md-toast-content {
+        border: @success-color solid 1px;
+
+        &:before {
+            background: @success-color;
+            position: absolute;
+            padding: 16px 7px 0px 7px;
+            color: #FFF;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            visibility: visible;
+        }
+    }
+
+    &.md-error-toast-theme .md-toast-content {
+        border: @error-color solid 1px;
+
+        &:before {
+            background: @error-color;
+            position: absolute;
+            padding: 16px 7px 0px 7px;
+            color: #FFF;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            content: "\f057";
+            font-family: 'FontAwesome';
+            visibility: visible;
+        }
+    }
+
+    &.md-info-toast-theme .md-toast-content {
+        border: @secondary-bg-color solid 1px;
+
+        &:before {
+            background: @secondary-bg-color;
+            position: absolute;
+            padding: 16px 7px 0px 7px;
+            color: #FFF;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            content: "\f05a";
+            font-family: 'FontAwesome';
+            visibility: visible;
+        }
+    }
+}
+
+md-tooltip {
+    border-radius: 0px;
+    font-size: 11px;
+    padding: 0px;
+    margin: 0px;
+
+    .md-content {
+        height: auto;
+        line-height: 14px;
+        padding: 5px 8px;
+        margin: 0px;
+        font-weight: 400;
+        background: #333333;
+    }
+}

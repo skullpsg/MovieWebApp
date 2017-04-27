@@ -1,0 +1,75 @@
+﻿<div>
+    <header>
+        <div class="container-fluid">
+            <h1>Movie Details</h1>
+        </div>
+    </header>
+    <section id="Scrollcontent" ng-scrollbars ng-scrollbars-config="Scrollcontent">
+        <div class="container-fluid">
+            <div class="pull-right">
+                <md-button type="text" class="md-raised md-secondary" ng-disabled="isLoading" ng-click="Next()"><md-tooltip>Next</md-tooltip>Next</md-button>
+            </div>
+            <div class="pull-right">
+                <md-button type="text" class="md-raised md-secondary" ng-disabled="isLoading" ng-click="Prev()"><md-tooltip>Prev</md-tooltip>Prev</md-button>
+            </div>
+            <div class="pull-right">
+                <md-button type="text" class="md-raised md-secondary" ng-disabled="isLoading" ng-click="addMovie()"><md-tooltip>Add Movie</md-tooltip>Add</md-button>
+            </div>
+            <div class="pull-left" ng-show="!isLoading">
+                <md-input-container ng-hide="Genres.length == 0">
+                    <label>Genre</label>
+                    <md-select ng-model="SelectedGenre">
+                        <md-option ng-repeat="_genre in Genres" ng-value="{{_genre}}" ng-selected="$first">
+                            {{_genre.Name}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+            <div class="pull-left">
+                <md-input-container class="md-block">
+                    <label>Title</label>
+                    <input ng-disabled="isLoading" name="Title" ng-maxlength="20" class="form-control" ng-model="title" autocomplete="off" />
+                </md-input-container>
+            </div>
+            <div class="container-fluid">
+                <div class="grid-large" ng-show="!isLoading">
+                    <div kendo-grid k-options="MovieGrid" k-ng-delay="MovieGrid" id="MovieListDetailsGridId"></div>
+                </div>
+                <div ng-show="isLoading">
+                    <div class="alert alert-info">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script id="movieListDetailsTemplate" type="text/x-kendo-template">
+    <tr>
+        <td>
+            #:Id#
+        </td>
+        <td> #:Runtime#</td>
+        <td> #:Genre#</td>
+        <td> #:Language#</td>
+        <td> #:imdbRating#</td>
+        <td> #:Title#</td>
+        <td> #:Year#</td>
+        <td>
+            <span style="float:left;">
+                <md-button class="md-fab md-mini md-primary" data-ng-click="EditMovie(dataItem)">
+                    <i class="fa fa-pencil"></i>
+                    <md-tooltip>
+                        Edit
+                    </md-tooltip>
+                </md-button>
+            </span>
+            <span style="float:left;">
+                <md-button class="md-fab md-mini md-warn" data-ng-click="DeleteMovie(dataItem)">
+                    <i class="fa fa-trash-o"></i>
+                    <md-tooltip>
+                        Delete
+                    </md-tooltip>
+                </md-button>
+            </span>
+        </td>
+    </tr>
+</script>

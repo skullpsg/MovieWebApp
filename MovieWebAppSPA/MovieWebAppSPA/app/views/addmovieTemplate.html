@@ -1,0 +1,55 @@
+﻿<div class="content" id="Scrollblade" ng-scrollbars ng-scrollbars-config="Scrollblade">
+    <div class="container-fluid">
+        <form name="form.AddOrEditmovie" novalidate style="padding-top:10px">
+            <md-input-container class="md-block">
+                <label>Title</label>
+                <input name="Title" ng-maxlength="20" class="form-control" ng-model="movie.Title" autocomplete="off" required />
+                <div ng-messages for="form.AddOrEditmovie.Title.$error">
+                    <div ng-if='form.AddOrEditmovie.Title.$touched' ng-message="required">This is required</div>
+                    <div ng-if='form.AddOrEditmovie.Title.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                </div>
+            </md-input-container>
+            <md-input-container ng-hide="movie.Years.length == 0">
+                <label>Year</label>
+                <md-select ng-model="movie.SelectedYear" aria-label="Namespace">
+                    <md-option ng-repeat="_year in movie.Years" ng-value="_year">
+                        {{ _year.value }}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-hide="movie.Languages.length == 0">
+                <label>Language</label>
+                <md-select ng-model="movie.SelectedLang">
+                    <md-option ng-repeat="_language in movie.Languages" ng-value="_language">
+                        {{_language.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-hide="movie.Genres.length == 0">
+                <label>Genre</label>
+                <md-select ng-model="movie.SelectedGenre">
+                    <md-option ng-repeat="_genre in movie.Genres" ng-value="_genre">
+                        {{_genre.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container ng-hide="movie.Runtimes.length == 0">
+                <label>Runtime</label>
+                <md-select ng-model="movie.SelectedRuntime">
+                    <md-option ng-repeat="_runtime in movie.Runtimes" ng-value="_runtime">
+                        {{_runtime.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>imdbRating</label>
+                <input name="Title" ng-maxlength="3" class="form-control" ng-model="movie.imdbRating" autocomplete="off" required />
+                <div ng-messages for="form.AddOrEditmovie.imdbRating.$error">
+                    <div ng-if='form.AddOrEditmovie.Title.$touched' ng-message="required">This is required</div>
+                    <div ng-if='form.AddOrEditmovie.Title.$touched' ng-message="maxlength">Maximum Length is 20.</div>
+                </div>
+            </md-input-container>
+        </form>
+    </div>
+</div>
+
